@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telugu Ruchulu - Coupons</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        li {
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #f00; /* Change link color on hover */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .coupons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .coupon {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .coupon:hover {
+            transform: translateY(-5px);
+        }
+
+        .coupon h3 {
+            font-size: 20px;
+            margin-top: 0;
+            color: #333;
+        }
+
+        .coupon p {
+            color: #666;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">Telugu Ruchulu - Coupons</div>
+            <nav>
+                <ul>
+                    <li><a href="res.html">Home</a></li>
+                    <li><a href="#">Coupons</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="coupons-container">
+                <div class="coupon">
+                    <h3>20% Off on Biryani</h3>
+                    <p>Use code <strong>BI20OFF</strong> to avail the discount.</p>
+                </div>
+                <div class="coupon">
+                    <h3>Free Drink with Starter</h3>
+                    <p>Get a complimentary soft drink with any starter order.</p>
+                </div>
+                <div class="coupon">
+                    <h3>Buy One, Get One Ice Cream</h3>
+                    <p>Buy any ice cream and get a second one for free!</p>
+                </div>
+                <div class="coupon">
+                    <h3>15% Off on Family Meals</h3>
+                    <p>Enjoy 15% off on all family meal combos.</p>
+                </div>
+                <div class="coupon">
+                    <h3>Weekend Special: 25% Off</h3>
+                    <p>Get 25% off on all orders placed during weekends.</p>
+                </div>
+                <div class="coupon">
+                    <h3>Combo Offer: Pizza + Pasta</h3>
+                    <p>Buy any large pizza and get pasta at half price.</p>
+                </div>
+                <!-- Add more coupons here -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>
