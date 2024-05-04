@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        /* Reset default margin, padding, and font */
+        body, ul {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* Basic styling for header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cart items list styles */
+        #cart-items {
+            list-style: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #cart-items li {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        #cart-items li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for cart item text */
+        #cart-items li span {
+            font-weight: bold;
+        }
+
+        /* Styling for total price */
+        #total-price {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            #cart-items li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Cart</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <ul id="cart-items"></ul>
+            <div id="total-price">Total: <span id="total-amount">0</span> Rupees</div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize cart items and total price
+        var cartItems = {};
+
+        // Function to handle adding items to cart
+        function addToCart(foodName, price) {
+            if (cartItems[foodName]) {
+                // If item already exists, increment quantity
+                cartItems[foodName].quantity++;
+            } else {
+                // Otherwise, add new item to cart
+                cartItems[foodName] = {
+                    price: parseInt(price), // Parse price as integer (assuming price is given in whole numbers)
+                    quantity: 1
+                };
+
+                // Create new cart item element
+                var cartItem = document.createElement('li');
+                cartItem.innerHTML = `
+                    <span>${foodName} (${cartItems[foodName].quantity})</span> - 
+                    <span>${price} Rupees</span>
+                    <button onclick="removeFromCart('${foodName}')">Remove</button>
+                `;
+
+                // Append the new item to the cart
+                document.getElementById('cart-items').appendChild(cartItem);
+            }
+
+            // Update total price
+            updateTotalPrice();
+
+            // Store updated cartItems in localStorage
+            localStorage.setItem('cartItems', JSON.stringify(Object.values(cartItems)));
+        }
+
+        // Function to remove item from cart
+        function removeFromCart(foodName) {
+            if (cartItems[foodName]) {
+                // Remove the item from cartItems object
+                delete cartItems[foodName];
+
+                // Remove the item's corresponding element from the cart list
+                var cartList = document.getElementById('cart-items');
+                var itemToRemove = cartList.querySelector(`li span:first-child`);
+                cartList.removeChild(itemToRemove.parentElement); // Remove the li element
+            }
+
+            // Update total price
+            updateTotalPrice();
+
+            // Store updated cartItems in localStorage
+            localStorage.setItem('cartItems', JSON.stringify(Object.values(cartItems)));
+        }
+
+        // Function to calculate and update total price
+        function updateTotalPrice() {
+            var totalPrice = 0;
+
+            // Calculate total price based on items in cart
+            for (var foodName in cartItems) {
+                var item = cartItems[foodName];
+                totalPrice += item.price * item.quantity;
+            }
+
+            // Display total price in Rupees
+            document.getElementById('total-amount').textContent = totalPrice; // Display total as integer
+        }
+
+        // Check if there are items in localStorage (from main page)
+        if (localStorage.getItem('cartItems')) {
+            var storedItems = JSON.parse(localStorage.getItem('cartItems'));
+
+            // Loop through stored items and add them to the cart on this page
+            storedItems.forEach(function(item) {
+                addToCart(item.foodName, item.price);
+            });
+
+            // Update total price when page loads with stored items
+            updateTotalPrice();
+        }
+    </script>
+</body>
+</html>

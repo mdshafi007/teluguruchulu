@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telugu Ruchulu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="brand">Telugu Ruchulu</div>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="coupons.html">Coupons</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search food" id="searchInput" />
+
+                    <button onclick="searchFood()">Search</button>
+
+                </div>
+                <div class="help">
+                    <li><a href="help.html">Help</a></li>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="breakfast" class="food-section">
+            <h2>Tiffins</h2>
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg/1280px-Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg" alt="Dosa" >
+                    <div class="food-details">
+                        <h3>Dosa</h3>
+                        <h4>40/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Idli_Sambar.JPG" alt="Idly">
+                    <div class="food-details">
+                        <h3>Idly</h3>
+                        <h4>30/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/2_Chapati_warm_and_ready_to_be_eaten.jpg/1280px-2_Chapati_warm_and_ready_to_be_eaten.jpg" alt="Chapathi">
+                    <div class="food-details">
+                        <h3>Chapathi</h3>
+                        <h4>50/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://myfoodstory.com/wp-content/uploads/2022/11/Vegetable-Upma-2.jpg" alt="Upma">
+                    <div class="food-details">
+                        <h3>Upma</h3>
+                        <h4>30/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://smithakalluraya.com/wp-content/uploads/2014/02/moong-dosa.jpg" alt="Pesarattu">
+                    <div class="food-details">
+                        <h3>Pesarattu</h3>
+                        <h4>40/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://i0.wp.com/kalimirchbysmita.com/wp-content/uploads/2016/07/Mysore-Bonda-01.jpg" alt="Mysore Bonda">
+                    <div class="food-details">
+                        <h3>Mysore Bonda</h3>
+                        <h4>50/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="starters" class="food-section">
+            <h2>Starters</h2>
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="https://www.spiceupthecurry.com/wp-content/uploads/2023/02/white-sauce-pasta-2.jpg" alt="White Sauce pasta" >
+                    <div class="food-details">
+                        <h3>White Sauce Pasta</h3>
+                        <h4>100/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://www.awesomecuisine.com/wp-content/uploads/2007/11/Pani-Puri.jpg.webp" alt="Pani puri">
+                    <div class="food-details">
+                        <h3>Pani-Puri</h3>
+                        <h4>30/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://www.wikihow.life/images/thumb/c/cb/Prepare-Chilli-Chicken-Step-17.jpg/aid6748552-v4-728px-Prepare-Chilli-Chicken-Step-17.jpg" alt="Chilli Chicken">
+                    <div class="food-details">
+                        <h3>Chilli Chicken</h3>
+                        <h4>90/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://kauveryhospital.com/blog/wp-content/uploads/2021/04/pizza-5179939_960_720-1200x545_c.jpg" alt="Chicken Pizza">
+                    <div class="food-details">
+                        <h3>Chicken Pizza</h3>
+                        <h4>200/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://c.ndtvimg.com/2023-04/uudj8mko_burger_625x300_28_April_23.jpg" alt="Chicken Burger">
+                    <div class="food-details">
+                        <h3>Chicken Burger</h3>
+                        <h4>100/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://i0.wp.com/mostlymasala.com/wp-content/uploads/2021/12/E612F7AE-1405-46DB-A40F-7A658AFB07B8.jpeg?w=2048&ssl=1" alt="Chicken Manchuria">
+                    <div class="food-details">
+                        <h3>Chicken Manchuria</h3>
+                        <h4>120/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="lunch" class="food-section">
+            <h2>Biryani</h2>
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="https://madhurasrecipe.com/wp-content/uploads/2023/03/Veg-Biryani-Featured.jpg" alt="Veg Biriyani">
+                    <div class="food-details">
+                        <h3>Veg Biryani</h3>
+                        <h4>100/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="Chicken Biriyani">
+                    <div class="food-details">
+                        <h3>Chicken Biryani</h3>
+                        <h4>230/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://img-global.cpcdn.com/recipes/649045ecfafc390b/400x400cq70/photo.jpg">
+                    <div class="food-details">
+                        <h3>Paneer Biryani</h3>
+                        <h4>180/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="thali" class="food-section">
+            <h2>Thali</h2>
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="https://eastindianrecipes.net/wp-content/uploads/2022/09/How-to-Make-North-Indian-Thali-Vegetarian-7.jpg" alt="Veg Thali">
+                    <div class="food-details">
+                        <h3>Veg Thali</h3>
+                        <h4>130/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://images.news18.com/ibnlive/uploads/2023/09/ganesh-chaturthi-2023-thali-16948432323x2.jpg?impolicy=website&width=640&height=480" alt="Nonveg Thali">
+                    <div class="food-details">
+                        <h3>Nonveg Thali</h3>
+                        <h4>250/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://www.nehascookbook.com/wp-content/uploads/2022/09/Punjabi-thali-WS.jpg" alt="Punjabi Thali">
+                    <div class="food-details">
+                        <h3>Punjabi Thali</h3>
+                        <h4>200/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sweets" class="food-section">
+            <h2>Sweets</h2>
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="https://rakskitchen.net/wp-content/uploads/2021/09/instant-gulab-jamun.jpg" alt="Gulab Jamun">
+                    <div class="food-details">
+                        <h3>Gulab Jamun</h3>
+                        <h4>40/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://cdn.ready-market.com.tw/21cd62de/Templates/pic/m/ANKO-Rasgulla-1200X1200.jpg?v=11d899f7" alt="Rasgulla">
+                    <div class="food-details">
+                        <h3>Rasgulla</h3>
+                        <h4>40/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://c.ndtvimg.com/2022-03/s35r1eoo_jalebi_625x300_15_March_22.jpg?im=FeatureCrop,algorithm=dnn,width=620,height=350" alt="jalebi">
+                    <div class="food-details">
+                        <h3>Jalebi</h3>
+                        <h4>30/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drinks" class="food-section">
+            <h2>Soft Drinks</h2>
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="https://m.media-amazon.com/images/I/71uDW-HlRFL.SL1500.jpg" alt="Thumbs up">
+                    <div class="food-details">
+                        <h3>Thumbs up</h3>
+                        <h4>25/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F044%2Fsprite-250-ml-soft-drink-887.jpg&w=384&q=15" alt="Sprite">
+                    <div class="food-details">
+                        <h3>Sprite</h3>
+                        <h4>25/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://rppizzeria.com/web/image/product.product/83/image_1024/Coca%20Cola%20Pet%20Bottle?unique=5c1f878" alt="coco cola">
+                    <div class="food-details">
+                        <h3>Coca Cola</h3>
+                        <h4>25/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="icecream" class="food-section">
+            <h2>Ice Creams</h2>
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="https://www.yummyfoodrecipes.com/resources/picture/org/Tasty-Chocolate-Ice-Cream.jpg" alt="chocolate Icecream">
+                    <div class="food-details">
+                        <h3>Chocolate Icecream</h3>
+                        <h4>60/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://www.cuisinart.com/globalassets/vanilla-ice-cream-w_mint_shutterstock_1698759373.jpg" alt="Vanilla Icecream">
+                    <div class="food-details">
+                        <h3>Vanilla Icecream</h3>
+                        <h4>50/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img src="https://www.twopeasandtheirpod.com/wp-content/uploads/2011/06/strawberry-ice-cream2.jpg" alt="Strawberry Icecream">
+                    <div class="food-details">
+                        <h3>Strawberry Icecream</h3>
+                        <h4>60/-</h4>
+                        <div class="button-container">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="add-to-wishlist">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Container -->
+        <div class="cart-container">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+        </div>
+    </main>
+
+    <script>
+        // Function to handle adding items to cart
+        function addToCart(foodName, price) {
+            // Create an object representing the item
+            var item = { foodName: foodName, price: price };
+
+            // Retrieve existing cart items from localStorage or initialize an empty array
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Add the new item to the cartItems array
+            cartItems.push(item);
+
+            // Store the updated cartItems array back into localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Optionally, display a confirmation message to the user
+            alert('Added to Cart: ' + foodName);
+
+            // Redirect to the cart page (optional)
+            window.location.href = 'cart.html';
+        }
+
+        // Add event listeners to all 'Add to Cart' buttons
+        var addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                var foodItem = event.target.closest('.food-item');
+                var foodName = foodItem.querySelector('h3').textContent;
+                var price = foodItem.querySelector('h4').textContent;
+
+                // Call addToCart function to add the item to cart
+                addToCart(foodName, price);
+            });
+        });
+
+        function searchFood() {
+            // Retrieve the search query from the input field
+            var searchText = document.getElementById('searchInput').value.toLowerCase();
+        
+            // Get all food items
+            var foodItems = document.querySelectorAll('.food-item');
+        
+            // Loop through each food item to check if it matches the search query
+            foodItems.forEach(function(item) {
+                var itemName = item.querySelector('h3').textContent.toLowerCase();
+        
+                // If the item name includes the search text, display the item; otherwise, hide it
+                if (itemName.includes(searchText)) {
+                    item.style.display = 'block'; // Show the item
+                } else {
+                    item.style.display = 'none'; // Hide the item
+                }
+            });
+        }
+        
+    </script>
+</body>
+</html>
